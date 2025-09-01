@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include __DIR__ . '/../config/conexao.php';
 
 $id = $_GET['id'];
 
@@ -19,7 +19,7 @@ if (!$contato) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Contato</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -35,7 +35,7 @@ if (!$contato) {
         </form>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
 <?php

@@ -1,5 +1,6 @@
 <?php
-include 'conexao.php';
+include __DIR__ . '/../config/conexao.php';
+
 
 // Pegar os dados do formulário
 $nome = $_POST['nome'];
@@ -20,7 +21,7 @@ $stmt->bind_param("ssss", $nome, $sobrenome, $email, $telefone);
 // Executar e verificar
 if ($stmt->execute()) {
     // Redireciona de volta para a página principal com uma mensagem de sucesso
-    header("Location: index.php?status=sucesso");
+    header("Location: ../index.php?status=sucesso");
 } else {
     // Exibe um erro
     echo "Erro ao salvar contato: " . $stmt->error;
